@@ -1,0 +1,7 @@
+.align-buttons {
+    display: flex
+}
+
+.even-row {
+    background-color: rgb(226, 233, 233);
+}

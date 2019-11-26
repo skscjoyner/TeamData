@@ -1,0 +1,19 @@
+    <div class="container">
+        <div *ngFor="let player of players; let odd=odd; let even=even;" [ngClass]="{ 'odd-row': odd, 'even-row': even }" class="row">
+            <div class="col" >
+                 {{ player.name }}
+            </div>
+            <div  *ngIf="!team" class="col-3">{{ getTeam(player).name }}</div>
+            <div class="col-1">{{ player.position | toPositionAbbr }}</div>
+            <div class="col-1">{{ player.leftHanded ? 'LH': 'RH' }}</div>
+            <div class="col-1">{{ player.birthDate | toAge }}</div>
+            <div class="col-1">
+                <button type="button" class="btn btn-primary " [routerLink]="['/player', player.id]">Details</button>
+            </div>
+            <div *ngIf="team" class="col-1">
+                <button type="button" class="btn btn-danger " (click)="removePlayerFromTeam(player)">Delete</button>
+            </div>
+        </div>
+            <button *ngIf="team" type="button" class="btn btn-primary" (click)="addPlayer()">Add Player</button>
+    </div>
+    

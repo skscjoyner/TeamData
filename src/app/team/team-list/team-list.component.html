@@ -1,0 +1,20 @@
+<div class="container">
+    <h1>Teams List</h1>
+
+    <div *ngFor="let team of teams; let odd=odd; let even=even;" [ngClass]="{ 'odd-row': odd, 'even-row': even }" class="row">
+            
+        <div class="col-10" >
+            {{ team.name }}
+        </div>
+            <div class="col-1">
+                <button type="button" class="btn btn-primary" [routerLink]="['/team', team.id]">Details</button>
+            </div>
+            <div class="col-1">
+                <button type="button" class="btn btn-danger" (click)="deleteTeam(team.id)">Delete</button>
+            </div>
+    </div>
+    <div class="align-buttons">
+        <button class="btn btn-primary" (click)="addTeam()">Add Team</button>
+    </div>
+        
+</div>

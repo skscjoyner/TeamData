@@ -1,0 +1,49 @@
+<div class="container register-form">
+  <h1>Register Your Team</h1>
+  <!-- <img
+    class="construction"
+    src="https://images.squarespace-cdn.com/content/v1/5bdb27ee9772ae1cc7955a0a/1551380747835-EI2FP4GB8PCIESBV0AH7/ke17ZwdGBToddI8pDm48kAt72yGFwHZjoxtmj75n0VMUqsxRUqqbr1mOJYKfIPR7LoDQ9mXPOjoJoqy81S2I8N_N4V1vUb5AoIIIbLZhVYy7Mythp_T-mtop-vrsUOmeInPi9iDjx9w8K4ZfjXt2dv608ZF5SQ066zrusfA3lZsto2GUPSkfCkjYhXQIm1t1CjLISwBs8eEdxAxTptZAUg/UnderConstruction.png?format=1500w"
+    alt="Under Construction"
+  /> -->
+
+  <form (submit)="registerSubmit()">
+      <div class="form-group">
+          <label>Name</label>
+          <input 
+          type="text"
+          name="name"
+          class="form-control"
+          [(ngModel)]="name" 
+          />
+      </div>
+      <div class="form-group">
+          <label>Team Name</label>
+          <input 
+          type="text"
+          name="teamName"
+          class="form-control"
+          [(ngModel)]="teamName" 
+          />
+      </div>
+    <div class="form-group">
+      <label>Email</label>
+      <input
+        type="email"
+        name="email"
+        class="form-control"
+        [(ngModel)]="email"
+      />
+    </div>
+    <div class="form-group">
+      <label>Password</label>
+      <input
+        type="password"
+        name="password"
+        id="password"
+        class="form-control"
+        [(ngModel)]="password"
+      />
+    </div>
+    <button type="submit" class="btn btn-primary btn-sm">Submit</button>
+  </form>
+</div>
